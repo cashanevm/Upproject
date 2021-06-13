@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label th:text="${id}">Name</label>
+<form  th:action="@{/edit}" method="post">
+  <input type="hidden" name="id" th:value="${id}">
+  <label >position</label>
+
+    <input type="radio" name="position" value="MANAGER"  ><label >MANAGER</label>
+    <input type="radio" name="position"  value="WORKER"  ><label >WORKER</label>
+    <input type="radio" name="position"  value="CHEF" ><label >CHEF</label>
+
+    <label>name</label>
+  <input type="text" name="name" th:value="${name}">
+
+  <button type="submit" class="btn-2"><span>update User</span></button>
+</form>
+</body>
+</html>
