@@ -4,7 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67b3ed90-2822-4df2-b431-808cbe9229ae" name="Default Changelist" comment="" />
+    <list default="true" id="67b3ed90-2822-4df2-b431-808cbe9229ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/Config/HibernateConf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/DAO/AbstractHibernateDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/DAO/EmployeeDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/Entities/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/Entities/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/add-role.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/add-role__body.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/UpProject_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/UpProject_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98/storage_v2/_src_/database/d4am615tqn7fq3.pF10Jg/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98/storage_v2/_src_/database/d4am615tqn7fq3.pF10Jg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98/storage_v2/_src_/database/d4am615tqn7fq3.pF10Jg/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98/storage_v2/_src_/database/d4am615tqn7fq3.pF10Jg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98/storage_v2/_src_/database/d4am615tqn7fq3.pF10Jg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98/storage_v2/_src_/database/d4am615tqn7fq3.pF10Jg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_experimental_spring_native_0_10_0_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_experimental_spring_native_0_10_0_SNAPSHOT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/Config/MainConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/Config/MainConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/Controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/Controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/DataBase/BaseConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/DataBase/BaseInteractions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/ServletInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/User/Position.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/User/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/upproject/UpProjectApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/upproject/Config/MainConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/upproject/Config/MainConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/upproject/Controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/upproject/Controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/upproject/DataBase/BaseConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/upproject/DataBase/BaseInteractions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/upproject/ServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/upproject/ServletInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/upproject/User/Position.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/upproject/User/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/upproject/UpProjectApplicationTests.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,13 +53,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
   <component name="ProjectId" id="1ttKDDDQpsNNkPAbGo45ukvdr2U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,20 +80,56 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sampleNevm-Lab6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../basic-hibernate-example-master/HibernateSample" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\UpProject\src\main\resources\templates" />
+      <recent name="E:\Projects\UpProject\src\main\java\com\example\upproject\DataBase" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.UpProjectApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HibernateManyToManyAnnotationMainIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UpProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.upproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.upproject" />
+      <option name="MAIN_CLASS_NAME" value="com.example.upproject.HibernateManyToManyAnnotationMainIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HibernateManyToManyAnnotationMainIntegrationTest.givenData_whenInsert_thenCreatesMtoMrelationship" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UpProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.upproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.upproject" />
+      <option name="MAIN_CLASS_NAME" value="com.example.upproject.HibernateManyToManyAnnotationMainIntegrationTest" />
+      <option name="METHOD_NAME" value="givenData_whenInsert_thenCreatesMtoMrelationship" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -60,6 +141,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.HibernateManyToManyAnnotationMainIntegrationTest.givenData_whenInsert_thenCreatesMtoMrelationship" />
+        <item itemvalue="JUnit.HibernateManyToManyAnnotationMainIntegrationTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -70,11 +157,35 @@
       <option name="presentableId" value="Default" />
       <updated>1623582825897</updated>
       <workItem from="1623582827391" duration="9520000" />
-      <workItem from="1623597613508" duration="3286000" />
+      <workItem from="1623597613508" duration="4556000" />
+      <workItem from="1623656761895" duration="2391000" />
+      <workItem from="1623671084204" duration="2957000" />
+      <workItem from="1623681971150" duration="8212000" />
+      <workItem from="1623760053108" duration="3794000" />
+      <workItem from="1623817650704" duration="7305000" />
+      <workItem from="1623853509978" duration="11740000" />
+      <workItem from="1623865729863" duration="15000" />
+      <workItem from="1624253090957" duration="2906000" />
+      <workItem from="1624344126070" duration="13993000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/UpProject$UpProjectApplication.ic" NAME="UpProjectApplication Coverage Results" MODIFIED="1624349689164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

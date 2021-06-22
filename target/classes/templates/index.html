@@ -12,36 +12,52 @@
         <table>
             <thead>
             <tr>
-                <th>id</th>
-                <th>role_id</th>
-                <th>Name</th>
+                <th>employee_id</th>
+                <th>first_name</th>
+                <th>last_name</th>
+                <th>PROJECT</th>
                 <th>edit</th>
                 <th>delete</th>
+                <th>add role</th>
                 <!--                        <th>Edit</th>
                                         <th>Delete</th>-->
             </tr>
             </thead>
             <tbody>
             <tr th:each="user : ${users}">
-                <td th:text="${user.id}"></td>
+                <td th:text="${user.employee_id}"></td>
 
-                <td th:text="${user.position}"></td>
-                <td th:text="${user.name}"></td>
+                <td th:text="${user.first_name}"></td>
+                <td th:text="${user.last_name}"></td>
+
+                <td th:each="project : ${user.projects}">
+                <p th:text="${project.title}"></p>
+                </td>
+
+
                 <td>
 
                     <form  th:action="@{/edit}"  >
-                        <input type="hidden"  name="id" th:value="${user.id}">
-                        <input type="hidden" name="position"  th:value="${user.position}">
-                        <input type="hidden" name="name"  th:value="${user.name}">
+                        <input type="hidden"  name="id" th:value="${user.employee_id}">
+                        <input type="hidden" name="position"  th:value="${user.first_name}">
+                        <input type="hidden" name="name"  th:value="${user.last_name}">
                         <button type="submit" class="btn-2"><span>edit User</span></button>
                     </form>
 
                 </td>
                 <td >
                     <form  th:action="@{/delete}"  >
-                        <input type="hidden"  name="id" th:value="${user.id}">
+                        <input type="hidden"  name="id" th:value="${user.employee_id}">
                         <button type="submit" class="btn-2"><span>del User</span></button>
                     </form>
+                </td>
+                <td>
+
+                    <form  th:action="@{/addrole}"  >
+                        <input type="hidden"  name="id" th:value="${user.employee_id}">
+                        <button type="submit" class="btn-2"><span>edit User</span></button>
+                    </form>
+
                 </td>
 
 
@@ -51,10 +67,61 @@
             </tbody>
         </table>
     </div>
+</div>
     <form action="./signup">
         <button  type="submit" class="btn-2"><span>Add a new user</span></button>
     </form>
 
+    <div th:switch="${projects}">
+        <h2 th:case="null">No projects yet!</h2>
+        <div th:case="*" >
+            <h2>projects</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>project_id</th>
+                    <th>title</th>
+
+                    <th>edit</th>
+                    <th>delete</th>
+                    <!--                        <th>Edit</th>
+                                            <th>Delete</th>-->
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="project : ${projects}">
+                    <td th:text="${project.project_id}"></td>
+
+                    <td th:text="${project.title}"></td>
+
+                    <td>
+
+<!--                        <form  th:action="@{/edit}"  >-->
+<!--                            <input type="hidden"  name="id" th:value="${project.project_id}">-->
+<!--                            <input type="hidden" name="position"  th:value="${project.title}">-->
+
+<!--                            <button type="submit" class="btn-2"><span>edit User</span></button>-->
+<!--                        </form>-->
+
+                    </td>
+                    <td >
+                        <form  th:action="@{/deletemainrole}"  >
+                            <input type="hidden"  name="id" th:value="${project.project_id}">
+                            <button type="submit" ><span>del Role</span></button>
+                        </form>
+                    </td>
+
+
+                    <!--                    <td><a th:href="@{/edit/{id}(id=${user.id})}">Edit</a></td>
+                                        <td><a th:href="@{/delete/{id}(id=${user.id})}">Delete</a></td>-->
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <form action="./addmainrole">
+            <button  type="submit" class="btn-2"><span>Add a new role</span></button>
+        </form>
 
 </div>
 </body>
