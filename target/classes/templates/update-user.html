@@ -5,19 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-<label th:text="${id}">Name</label>
-<form  th:action="@{/edit}" method="post">
-  <input type="hidden" name="id" th:value="${id}">
-  <label >position</label>
-
-    <input type="radio" name="position" value="MANAGER"  ><label >MANAGER</label>
-    <input type="radio" name="position"  value="WORKER"  ><label >WORKER</label>
-    <input type="radio" name="position"  value="CHEF" ><label >CHEF</label>
-
-    <label>name</label>
-  <input type="text" name="name" th:value="${name}">
-
-  <button type="submit" class="btn-2"><span>update User</span></button>
+<label th:text="${user.user_id}">Name</label>
+<form  th:action="@{/editUser}"  method="post">
+    <input type="hidden"  name="id" th:value="${user.user_id}">
+    <label >first_name</label>
+    <input type="text"  name="first_name" placeholder="first_name" th:value="${user.first_name}">
+    <label >last_name</label>
+    <input type="text"  name="last_name" placeholder="last_name" th:value="${user.last_name}">
+    <label >email</label>
+    <input type="email"  name="email" placeholder="email" th:value="${user.email}">
+    <label >position</label>
+    <div th:each="role : ${roles}">
+        <input type="radio" name="role" th:value="${role.role_id}"  ><label th:text="${role.title}"></label>
+    </div>
+    <button type="submit"><span>Apdate User</span></button>
 </form>
 </body>
 </html>

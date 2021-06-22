@@ -25,36 +25,35 @@
             </thead>
             <tbody>
             <tr th:each="user : ${users}">
-                <td th:text="${user.employee_id}"></td>
+                <td th:text="${user.user_id}"></td>
 
                 <td th:text="${user.first_name}"></td>
                 <td th:text="${user.last_name}"></td>
 
-                <td th:each="project : ${user.projects}">
+                <td th:each="project : ${user.roles}">
                 <p th:text="${project.title}"></p>
                 </td>
 
 
                 <td>
 
-                    <form  th:action="@{/edit}"  >
-                        <input type="hidden"  name="id" th:value="${user.employee_id}">
-                        <input type="hidden" name="position"  th:value="${user.first_name}">
-                        <input type="hidden" name="name"  th:value="${user.last_name}">
+                    <form  th:action="@{/editUser}"  >
+                        <input type="hidden"  name="id" th:value="${user.user_id}">
                         <button type="submit" class="btn-2"><span>edit User</span></button>
                     </form>
 
                 </td>
                 <td >
                     <form  th:action="@{/delete}"  >
-                        <input type="hidden"  name="id" th:value="${user.employee_id}">
+                        <input type="hidden"  name="id" th:value="${user.user_id}">
+                        <input type="hidden"  name="entity" th:value="user">
                         <button type="submit" class="btn-2"><span>del User</span></button>
                     </form>
                 </td>
                 <td>
 
                     <form  th:action="@{/addrole}"  >
-                        <input type="hidden"  name="id" th:value="${user.employee_id}">
+                        <input type="hidden"  name="id" th:value="${user.user_id}">
                         <button type="submit" class="btn-2"><span>edit User</span></button>
                     </form>
 
@@ -68,11 +67,12 @@
         </table>
     </div>
 </div>
-    <form action="./signup">
-        <button  type="submit" class="btn-2"><span>Add a new user</span></button>
+    <form action="./add">
+        <input type="hidden" value="user" name="entity">
+        <button  type="submit"><span>Add a new user</span></button>
     </form>
 
-    <div th:switch="${projects}">
+    <div th:switch="${roles}">
         <h2 th:case="null">No projects yet!</h2>
         <div th:case="*" >
             <h2>projects</h2>
@@ -89,10 +89,10 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="project : ${projects}">
-                    <td th:text="${project.project_id}"></td>
+                <tr th:each="role : ${roles}">
+                    <td th:text="${role.role_id}"></td>
 
-                    <td th:text="${project.title}"></td>
+                    <td th:text="${role.title}"></td>
 
                     <td>
 
@@ -105,8 +105,9 @@
 
                     </td>
                     <td >
-                        <form  th:action="@{/deletemainrole}"  >
-                            <input type="hidden"  name="id" th:value="${project.project_id}">
+                        <form  th:action="@{/delete}"  >
+                            <input type="hidden"  name="id" th:value="${role.role_id}">
+                            <input type="hidden"  name="entity" th:value="role">
                             <button type="submit" ><span>del Role</span></button>
                         </form>
                     </td>
@@ -119,7 +120,8 @@
             </table>
 
         </div>
-        <form action="./addmainrole">
+        <form action="./add">
+            <input type="hidden" value="role" name="entity">
             <button  type="submit" class="btn-2"><span>Add a new role</span></button>
         </form>
 

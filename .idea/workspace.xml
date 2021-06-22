@@ -4,46 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67b3ed90-2822-4df2-b431-808cbe9229ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/Config/HibernateConf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/DAO/AbstractHibernateDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/DAO/EmployeeDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/Entities/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/Entities/Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/add-role.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/add-role__body.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/UpProject_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/UpProject_war_exploded.xml" afterDir="false" />
+    <list default="true" id="67b3ed90-2822-4df2-b431-808cbe9229ae" name="Default Changelist" comment="hibernate">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/DAO/RoleDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/DAO/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/Entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98/storage_v2/_src_/database/d4am615tqn7fq3.pF10Jg/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98/storage_v2/_src_/database/d4am615tqn7fq3.pF10Jg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98/storage_v2/_src_/database/d4am615tqn7fq3.pF10Jg/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98/storage_v2/_src_/database/d4am615tqn7fq3.pF10Jg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98/storage_v2/_src_/database/d4am615tqn7fq3.pF10Jg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98/storage_v2/_src_/database/d4am615tqn7fq3.pF10Jg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_experimental_spring_native_0_10_0_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_experimental_spring_native_0_10_0_SNAPSHOT.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/Config/MainConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/Config/MainConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/Controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/Controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/DataBase/BaseConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/DataBase/BaseInteractions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/ServletInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/User/Position.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/User/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/DAO/AbstractHibernateDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/DAO/AbstractHibernateDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/DAO/EmployeeDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/Entities/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/Entities/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/Entities/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-role.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add-role-to-user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-role__body.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-user.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/upproject/UpProjectApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/upproject/Config/MainConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/upproject/Config/MainConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/update-user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/update-user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/upproject/Controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/upproject/Controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/upproject/DataBase/BaseConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/upproject/DataBase/BaseInteractions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/upproject/ServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/upproject/ServletInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/upproject/User/Position.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/upproject/User/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/add-user.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/upproject/UpProjectApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/update-user.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/update-user.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +36,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -166,8 +148,16 @@
       <workItem from="1623853509978" duration="11740000" />
       <workItem from="1623865729863" duration="15000" />
       <workItem from="1624253090957" duration="2906000" />
-      <workItem from="1624344126070" duration="13993000" />
+      <workItem from="1624344126070" duration="27392000" />
     </task>
+    <task id="LOCAL-00001" summary="hibernate">
+      <created>1624366848292</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624366848292</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +175,11 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hibernate" />
+    <option name="LAST_COMMIT_MESSAGE" value="hibernate" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/UpProject$UpProjectApplication.ic" NAME="UpProjectApplication Coverage Results" MODIFIED="1624349689164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/UpProject$UpProjectApplication.ic" NAME="UpProjectApplication Coverage Results" MODIFIED="1624378915093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

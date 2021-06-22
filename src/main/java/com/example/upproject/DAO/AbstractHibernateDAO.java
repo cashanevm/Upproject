@@ -2,6 +2,8 @@ package com.example.upproject.DAO;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.resource.transaction.spi.TransactionStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
@@ -18,30 +20,54 @@ public abstract class AbstractHibernateDAO< T extends Serializable>{
     }
 
     public T findOne(long id) {
-        return (T) getCurrentSession().get( clazz, id );
+
+        Session session = getCurrentSession();
+        this.makeTransaction();
+        T t = (T) session.get( clazz, id );
+        return t;
     }
     public List< T > findAll() {
-        return getCurrentSession()
-                .createQuery( "from " + clazz.getName() ).list();
+        return getCurrentSession().createQuery( "from " + clazz.getName() ).list();
     }
 
     public void save(T entity) {
-        getCurrentSession().persist( entity );
+        Session session = getCurrentSession();
+        this.makeTransaction();
+        session.persist( entity );
+        session.getTransaction().commit();
     }
 
-    public T update(T entity) {
-        return (T) getCurrentSession().merge( entity );
+    public void update(T entity) {
+        Session session = getCurrentSession();
+        this.makeTransaction();
+        session.merge( entity );
+        session.getTransaction().commit();
+
     }
 
     public void delete(T entity) {
-        getCurrentSession().delete( entity );
+        Session session = getCurrentSession();
+        this.makeTransaction();
+        session.delete( entity );
+        session.getTransaction().commit();
     }
     public void deleteById(long id) {
+        Session session = getCurrentSession();
+        this.makeTransaction();
         final T entity = findOne( id);
         delete( entity );
+        session.getTransaction().commit();
     }
 
     protected final Session getCurrentSession(){
         return sessionFactory.getCurrentSession();
+    }
+
+    public Transaction makeTransaction() {
+        Session session = getCurrentSession();
+        if(session.getTransaction().getStatus().equals(TransactionStatus.NOT_ACTIVE)){
+            session.getTransaction().begin();
+        }
+        return session.getTransaction();
     }
 }

@@ -1,17 +1,18 @@
 package com.example.upproject.Controllers;
 
 
-import com.example.upproject.DAO.EmployeeDAO;
-import com.example.upproject.Entities.Employee;
-import com.example.upproject.Entities.Project;
+import com.example.upproject.DAO.RoleDAO;
+import com.example.upproject.DAO.UserDAO;
+import com.example.upproject.Entities.User;
+import com.example.upproject.Entities.Role;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
         import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.sql.SQLException;
 import java.util.*;
@@ -19,140 +20,74 @@ import java.util.*;
 @Controller
 public class UserController {
     @Autowired
-    EmployeeDAO employeeDAO;
-
+    UserDAO userDAO;
+    @Autowired
+    RoleDAO roleDAO;
 
     @GetMapping("/")
     public String index(Model model) throws SQLException {
-
-        String[] employeeData = { "Peter Oven", "Allan Norman" };
-        String[] projectData = { "IT Project", "Networking Project" };
-        Set<Project> projects = new HashSet<>();
-
-        for (String proj : projectData) {
-            projects.add(new Project(proj));
-        }
-
-        for (String emp : employeeData) {
-            Employee employee = new Employee(emp.split(" ")[0],
-                    emp.split(" ")[1]);
-
-            //assertEquals(0, employee.getProjects().size());
-            employee.setProjects(projects);
-            employeeDAO.save(employee);
-
-            //assertNotNull(employee);
-        }
-
-        model.addAttribute("users",employeeDAO.findAll());
+        model.addAttribute("roles",roleDAO.findAll());
+        model.addAttribute("users",userDAO.findAll());
         return "index";
     }
-
-//
-//
-//
-//
-//    @GetMapping("/signup")
-//    public String showSignUpForm(Employee user) {
-//
-//
-//
-//        return "add-user";
-//
-//
-//    }
-//
-//    @PostMapping("/adduser")
-//    public String addUser(@Valid Employee user, BindingResult result, Model model) {
-//        if (result.hasErrors()) {
-//            return "add-user";
-//        }
-//
-//        //userRepository.save(user);
-//        return "redirect:/";
-//    }
-//    @GetMapping("/addrole")
-//    public String showRole( @RequestParam(name = "id") String id, Model model ){
-//
-//        model.addAttribute("user", this.get(Employee.class, Long.valueOf(id)));
-//        model.addAttribute("projects", this.getAll(Project.class));
-//        return "add-role";
-//
-//
-//    }
-//    @PostMapping("/addrole")
-//    public String addRole( @RequestParam(name = "position") String position,@RequestParam(name = "id") String id, Model model ){
-//        Employee employee = this.get(Employee.class, Long.valueOf(id));
-//        Project project = this.get(Project.class, Long.valueOf(position));
-//        employee.addPosition(project);
-//        project.addUser(employee);
-//        this.saveOrUpdate(employee);
-//        this.saveOrUpdate(project);
-//        return "redirect:/";
-//    }
-//
-//
-//
-//    @GetMapping("/addmainrole")
-//    public String addMainRole() {
-//
-//            return "add-role__body";
-//
-//
-//    }
-//
-//    @PostMapping("/addmainrole")
-//    public String addMainRole(@RequestParam(name = "title") String title, Model model) {
-//        Project project = new Project(title);
-//        this.save(project);
-//        return "redirect:/";
-//    }
-//
-//    @GetMapping("/deletemainrole")
-//    public String deleteMainRole(@RequestParam(name = "id") String id, Model model) {
-//        Project project = this.get(Project.class, Long.parseLong(id));
-//        this.delete(project);
-//
-//        System.out.println(project.title);
-//
-//        return "redirect:/";
-//    }
-//
-//
-//
-//    public <T> T save(final T o){
-//        return (T) sessionFactory.getCurrentSession().save(o);
-//    }
-//
-//
-//    public void delete(final Object object){
-//
-//
-//
-//        sessionFactory.getCurrentSession().delete(object);
-//    }
-//
-//    /***/
-//    public <T> T get(final Class<T> type, final long id){
-//        return (T) sessionFactory.getCurrentSession().get(type, id);
-//    }
-//
-//    /***/
-//    public <T> T merge(final T o)   {
-//        return (T) sessionFactory.getCurrentSession().merge(o);
-//    }
-//
-//    /***/
-//    public <T> void saveOrUpdate(final T o){
-//        sessionFactory.getCurrentSession().saveOrUpdate(o);
-//    }
-//
-//    public <T> List<T> getAll( Class<T> type) {
-//         Session session = sessionFactory.getCurrentSession();
-//         Criteria crit = session.createCriteria(type);
-//        return crit.list();
-//    }
-//
-//
-//
+    @GetMapping("/delete")
+    public String delete(@RequestParam(name = "id") String id,@RequestParam(name = "entity") String entity) throws SQLException {
+        switch (entity){
+            case "user":
+                userDAO.deleteById(Long.parseLong(id));
+                break;
+            case "role":
+                roleDAO.deleteById(Long.parseLong(id));
+                break;
+        }
+        return "redirect:/";
+    }
+    @GetMapping("/add")
+    public String addGet(@RequestParam(name = "entity") String entity ,Model model) {
+        model.addAttribute("entity",entity);
+        switch (entity){
+            case "user":
+                model.addAttribute("roles",roleDAO.findAll());
+                break;
+            case "role":
+                model.addAttribute("users",userDAO.findAll());
+                break;
+        }
+        return "add";
+    }
+    @PostMapping("/addRole")
+    public String addRole(@RequestParam(name = "title") String title) {
+        Role role = new Role(title);
+        roleDAO.save(role);
+        return "redirect:/";
+    }
+    @PostMapping("/addUser")
+    public String addUser(@RequestParam(name = "first_name") String first_name,@RequestParam(name = "last_name") String last_name,@RequestParam(name = "email") String email,@RequestParam(name = "role") String role) {
+        User user = new User(first_name,last_name,email);
+        user.getRoles().add(roleDAO.findOne(Long.parseLong(role)));
+        userDAO.save(user);
+        return "redirect:/";
+    }
+    @GetMapping("/addRoleToUser")
+    public String addRoleToUser(@RequestParam(name = "id") String id) {
+        return "add-role-to-user";
+    }
+    @GetMapping("/editUser")
+    public String editUserGet(@RequestParam(name = "id") String id, Model model) {
+        model.addAttribute("user",userDAO.findOne(Long.parseLong(id)));
+        model.addAttribute("roles",roleDAO.findAll());
+        return "update-user";
+    }
+    @PostMapping("/editUser")
+    public String editUserPost(@RequestParam(name = "first_name") String first_name,@RequestParam(name = "last_name") String last_name,@RequestParam(name = "email") String email,@RequestParam(name = "role") String role,@RequestParam(name = "id") String id, Model model) {
+        User user = userDAO.findOne(Long.parseLong(id));
+        user.setFirst_name(first_name);
+        user.setLast_name(last_name);
+        user.setEmail(email);
+        Role role1 = roleDAO.findOne(Long.parseLong(role));
+        user.getRoles().clear();
+        user.getRoles().add(role1);
+        userDAO.update(user);
+        return "redirect:/";
+    }
 }
