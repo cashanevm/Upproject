@@ -5,27 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67b3ed90-2822-4df2-b431-808cbe9229ae" name="Default Changelist" comment="hibernate">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/DAO/RoleDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/DAO/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/Entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98/storage_v2/_src_/database/d4am615tqn7fq3.pF10Jg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b4fb99b-a0e7-4300-93d5-5193118eef98/storage_v2/_src_/database/d4am615tqn7fq3.pF10Jg/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/Controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/Controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/DAO/AbstractHibernateDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/DAO/AbstractHibernateDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/DAO/EmployeeDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/Entities/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/upproject/Entities/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/upproject/Entities/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-role.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add-role-to-user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-role__body.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-role-to-user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add-role-to-user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/update-user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/update-user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/update-user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/upproject/Controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/upproject/Controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/add-user.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/update-user.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/update-user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/update-user.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,17 +61,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.UpProjectApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HibernateManyToManyAnnotationMainIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UpProject" />
       <extension name="coverage">
@@ -148,7 +124,8 @@
       <workItem from="1623853509978" duration="11740000" />
       <workItem from="1623865729863" duration="15000" />
       <workItem from="1624253090957" duration="2906000" />
-      <workItem from="1624344126070" duration="27392000" />
+      <workItem from="1624344126070" duration="27782000" />
+      <workItem from="1624430891119" duration="2696000" />
     </task>
     <task id="LOCAL-00001" summary="hibernate">
       <created>1624366848292</created>
@@ -157,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624366848292</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="hibernate">
+      <created>1624384630558</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624384630558</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -72,14 +72,23 @@ public class UserController {
     public String addRoleToUser(@RequestParam(name = "id") String id) {
         return "add-role-to-user";
     }
-    @GetMapping("/editUser")
-    public String editUserGet(@RequestParam(name = "id") String id, Model model) {
-        model.addAttribute("user",userDAO.findOne(Long.parseLong(id)));
-        model.addAttribute("roles",roleDAO.findAll());
-        return "update-user";
+    @GetMapping("/edit")
+    public String edit(@RequestParam(name = "entity") String entity,@RequestParam(name = "id") String id, Model model) {
+        model.addAttribute("entity",entity);
+        switch (entity){
+            case "user":
+                model.addAttribute("user",userDAO.findOne(Long.parseLong(id)));
+                model.addAttribute("roles",roleDAO.findAll());
+                break;
+            case "role":
+                model.addAttribute("role",roleDAO.findOne(Long.parseLong(id)));
+                break;
+
+        }
+        return "update";
     }
     @PostMapping("/editUser")
-    public String editUserPost(@RequestParam(name = "first_name") String first_name,@RequestParam(name = "last_name") String last_name,@RequestParam(name = "email") String email,@RequestParam(name = "role") String role,@RequestParam(name = "id") String id, Model model) {
+    public String editUser(@RequestParam(name = "first_name") String first_name,@RequestParam(name = "last_name") String last_name,@RequestParam(name = "email") String email,@RequestParam(name = "role") String role,@RequestParam(name = "id") String id, Model model) {
         User user = userDAO.findOne(Long.parseLong(id));
         user.setFirst_name(first_name);
         user.setLast_name(last_name);
@@ -88,6 +97,13 @@ public class UserController {
         user.getRoles().clear();
         user.getRoles().add(role1);
         userDAO.update(user);
+        return "redirect:/";
+    }
+    @PostMapping("/editRole")
+    public String editRole(@RequestParam(name = "title") String title,@RequestParam(name = "id") String id,Model model) {
+        Role role = roleDAO.findOne(Long.parseLong(id));
+        role.setTitle(title);
+        roleDAO.update(role);
         return "redirect:/";
     }
 }

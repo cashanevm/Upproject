@@ -4,6 +4,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Пример веб-страницы</title>
 </head>
+<style>
+    table {
+        width: 100%; /* Ширина таблицы */
+        border-collapse: collapse; /* Убираем двойные линии */
+    }
+    thead {
+        background: #f5e8d0; /* Цвет фона заголовка */
+    }
+    td, th {
+        padding: 5px; /* Поля в ячейках */
+        border: 1px solid #333; /* Параметры рамки */
+    }
+    tbody tr:nth-child(even) {
+        background: #f0f0f0; /* Зебра */
+    }
+</style>
 <body>
 <div th:switch="${users}">
     <h2 th:case="null">No users yet!</h2>
@@ -12,13 +28,13 @@
         <table>
             <thead>
             <tr>
-                <th>employee_id</th>
-                <th>first_name</th>
-                <th>last_name</th>
-                <th>PROJECT</th>
-                <th>edit</th>
-                <th>delete</th>
-                <th>add role</th>
+                <th>Id</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Project</th>
+                <th>Edit</th>
+                <th>Delete</th>
+
                 <!--                        <th>Edit</th>
                                         <th>Delete</th>-->
             </tr>
@@ -37,8 +53,9 @@
 
                 <td>
 
-                    <form  th:action="@{/editUser}"  >
+                    <form  th:action="@{/edit}"  >
                         <input type="hidden"  name="id" th:value="${user.user_id}">
+                        <input type="hidden"  name="entity" value="user">
                         <button type="submit" class="btn-2"><span>edit User</span></button>
                     </form>
 
@@ -46,18 +63,11 @@
                 <td >
                     <form  th:action="@{/delete}"  >
                         <input type="hidden"  name="id" th:value="${user.user_id}">
-                        <input type="hidden"  name="entity" th:value="user">
+                        <input type="hidden"  name="entity" value="user">
                         <button type="submit" class="btn-2"><span>del User</span></button>
                     </form>
                 </td>
-                <td>
 
-                    <form  th:action="@{/addrole}"  >
-                        <input type="hidden"  name="id" th:value="${user.user_id}">
-                        <button type="submit" class="btn-2"><span>edit User</span></button>
-                    </form>
-
-                </td>
 
 
                 <!--                    <td><a th:href="@{/edit/{id}(id=${user.id})}">Edit</a></td>
@@ -75,17 +85,14 @@
     <div th:switch="${roles}">
         <h2 th:case="null">No projects yet!</h2>
         <div th:case="*" >
-            <h2>projects</h2>
+            <h2>Projects</h2>
             <table>
                 <thead>
                 <tr>
-                    <th>project_id</th>
-                    <th>title</th>
-
-                    <th>edit</th>
-                    <th>delete</th>
-                    <!--                        <th>Edit</th>
-                                            <th>Delete</th>-->
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -96,12 +103,11 @@
 
                     <td>
 
-<!--                        <form  th:action="@{/edit}"  >-->
-<!--                            <input type="hidden"  name="id" th:value="${project.project_id}">-->
-<!--                            <input type="hidden" name="position"  th:value="${project.title}">-->
-
-<!--                            <button type="submit" class="btn-2"><span>edit User</span></button>-->
-<!--                        </form>-->
+                        <form  th:action="@{/edit}"  >
+                            <input type="hidden"  name="id" th:value="${role.role_id}">
+                            <input type="hidden"  name="entity" value="role">
+                            <button type="submit"><span>edit Role</span></button>
+                        </form>
 
                     </td>
                     <td >
@@ -113,12 +119,19 @@
                     </td>
 
 
-                    <!--                    <td><a th:href="@{/edit/{id}(id=${user.id})}">Edit</a></td>
-                                        <td><a th:href="@{/delete/{id}(id=${user.id})}">Delete</a></td>-->
+
                 </tr>
                 </tbody>
             </table>
-
+            <hr>
+<table th:each="role : ${roles}">
+    <tr>
+        <th colspan="3"  th:text="${role.title}"></th>
+    </tr>
+    <tr th:each="user:${role.users}" >
+       <td th:text="${user.user_id}"></td><td  th:text="${user.first_name}"></td><td  th:text="${user.last_name}"></td>
+    </tr>
+</table>
         </div>
         <form action="./add">
             <input type="hidden" value="role" name="entity">

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:switch="${entity}">
+    <h1 th:case="null">No yet!</h1>
+    <div th:case="user" >
+        <label th:text="${user.user_id}">Name</label>
+        <form  th:action="@{/editUser}"  method="post">
+            <input type="hidden"  name="id" th:value="${user.user_id}">
+            <label >first_name</label>
+            <input type="text"  name="first_name" placeholder="first_name" th:value="${user.first_name}">
+            <label >last_name</label>
+            <input type="text"  name="last_name" placeholder="last_name" th:value="${user.last_name}">
+            <label >email</label>
+            <input type="email"  name="email" placeholder="email" th:value="${user.email}">
+            <label >position</label>
+            <div th:each="role : ${roles}">
+                <input type="radio" name="role" th:value="${role.role_id}"  ><label th:text="${role.title}"></label>
+            </div>
+            <button type="submit"><span>Apdate User</span></button>
+        </form>
+
+    </div>
+    <div th:case="role" >
+
+        <label th:text="${role.role_id}">Name</label>
+        <form  th:action="@{/editRole}"  method="post">
+            <input type="hidden"  name="id" th:value="${role.role_id}">
+            <label >title</label>
+            <input type="text"  name="title" placeholder="title" th:value="${role.title}">
+            <button type="submit"><span>Apdate Role</span></button>
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

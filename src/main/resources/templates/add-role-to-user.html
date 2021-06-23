@@ -7,7 +7,7 @@
 <body>
 
 <label th:text="${user.first_name}">Name</label>
-<form  th:action="@{/addrole}" method="post">
+<form  th:action="@{/add}" method="post">
   <input type="hidden" name="id" th:value="${user.employee_id}">
   <label  >position</label>
 <div th:switch="${projects}">
