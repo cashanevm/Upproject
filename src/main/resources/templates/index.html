@@ -21,6 +21,11 @@
     }
 </style>
 <body>
+<form name='f' th:action="@{/perform_logout}"  method='POST'>
+
+            <td><input name="submit" type="submit" value="exit" /></td>
+
+</form>
 <div th:switch="${users}">
     <h2 th:case="null">No users yet!</h2>
     <div th:case="*" >
